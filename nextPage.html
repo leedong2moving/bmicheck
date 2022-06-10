@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang = "ko">
   <head>
-    <title> New Document </title>
-    <meta name="Generator" content="EditPlus">
-    <meta name="Author" content="">
-    <meta name="Keywords" content="">
-    <meta name="Description" content="">
+    <meta charset ="utf-8">
+    <title>BMI 계산기</title>
   </head>
-  <script>
-  var a = prompt("성별", "(남자/여자)로 입력");
-  var b = prompt("체중(kg단위)", "");
-  var c = prompt("키(cm단위)", "");
-  c = c/100;
-  var BMI = b / (c*c);
-  if(a=="남자")
-  {
-  document.write("BMI 지수는 " + BMI + " 입니다<br>");
-  if(BMI < 20.0)
-  document.write("저체중입니다");
-  else if(BMI < 25)
-  document.write("정상입니다");
-  else
-  document.write("과체중");
-  }
-  else
-  {
-  document.write("BMI 지수는 " + BMI + " 입니다<br>");
-  if(BMI < 18.5)
-  document.write("저체중입니다");
-  else if(BMI < 25)
-  document.write("정상입니다");
-  else
-  document.write("과체중");
-  }
-  </script>
   <body>
+    var cm, kg, BMI;
+
+    cm=prompt("당신의 키를 입력하세요", "cm");
+    kg=prompt("당신의 몸무게를 입력하세요", "kg");
+
+    cm=cm*0.01;
+
+    BMI = kg/(cm*cm);
+
+    if(BMI>30.0){
+
+      document.write("당신은 현재[비만]상태 입니다. 운동하세요");
+    }
+    else if((BMI>25.0)&&(BMI<=29.9)){
+
+      document.write("당신은 현재[과체중]상태 입니다. 조심하세요");
+    }
+    else if((BMI>18.5)&&(BMI<=24.9)){
+
+      document.write("당신은 [정상]입니다.");
+    }
+    else{
+
+      document.write("당신은 현재 [저체중]상태 입니다. 많이 드세요");
+    }
+    
     <!-- 'index.html'과 연결 -->
     <a href="index.html">'index'로 이동</a>
   </body>
