@@ -23,15 +23,6 @@ var cm , kg, BMI;
 		if(kg == "")
 		{alert ("몸무게를 입력하세요");
 		return;}
-		
-		/* if (isNaN(cm) == true || isNaN(kg) == true)
-		{alert ("빈공간을 체워주세요");
-		return;} */
-		
-		/* 이런식으로 한번에 처리도 가능합니다. 뭔뜻이냐면,
-		cm 과 kg 둘 중에 빈공간이 있거나, 숫자가 아닐경우,
-		 "빈공간을 체워주세요" 라는 메세지가 뜨게끔 하는
-		스크립트 구성이지요^^ */
 	
 	BMI=kg/(cm*cm);
 	
@@ -67,11 +58,11 @@ var cm , kg, BMI;
 
 <body>
 <h3>비만도 계산기</h3>
-<p><span style="color: rgb(255, 0, 0);  font-size: 10pt;">당신의 비만도를 알아보세요^^</p>
+<p><span style="color: rgb(255, 0, 0);  font-size: 10pt;"> 비만도 체크</p>
 <input id="id01" type="text" value="키를 입력하세요">
 <input id="id02" type="text" value="몸무게를 입력하세요">
 <input type="button" value="결과확인" onclick="KeyR();">
-<a href="index.html">'메인 '</a>
+	<p><a href="index.html">'메인 화면으로 돌아가기 '</a></p>
 
 
 </body>
